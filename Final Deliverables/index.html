@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <title>Flight Delay Prediction</title>
+    <style>
+        body {
+    font-family: sans-serif;
+    /* background-image: url(images\ \(1\).jfif); */
+    background-image: url(https://wallpaperaccess.com/full/42422.jpg);
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+    background-size: cover;
+    color: wheat;
+}
+
+.container {
+    width: 50%;
+    margin: 3% auto;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px #333;
+}
+
+.header {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.main {
+    text-align: center;
+
+}
+
+td {
+    color:black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 80px 5px 90px;      
+}
+
+input[type=number],select {
+    width: 100%;
+    padding: 10px 16px;
+    margin: 6px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgb(224, 245, 231);
+    position: relative;
+  }
+
+label {
+    font-size: 20px;
+    color: #333;
+    text-align: left;
+    text-align: center;
+    position: relative;
+}
+
+input[type=submit] {
+    width: 60%;
+    background-color: #676767;
+    color: white;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    /* background-color: #703f36;; */
+    box-shadow: 2px 2px 5px rgb(104, 104, 104);
+    background-color:  rgb(69, 69, 69);
+    border-radius: 4px;
+  }
+
+  input[type=number]:hover {
+    /* background-color: #703f36;; */
+    box-shadow: 2px 2px 5px rgb(163, 163, 163);
+    background-color:  rgb(195, 199, 197);
+    border-radius: 4px;
+  }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="header"><h1>CAR RESALE VALUE PREDICTION</h1><br></div>
+        <div class="main">
+        <form action="{{ url_for('Predict')}}" method="post">
+
+
+
+            <table>
+  <b>
+    <tr style="text-align: left;"><td>Abtest :</td>  <td><input type="number" name="abtest" placeholder="Enter the abtest" required="required"></td></tr>
+    <tr style="text-align: left;"><td>VehicleType :</td>  <td><input type="number" name="vehicleType" placeholder="Enter the vehicleType" required="required"></td></tr>
+    <tr style="text-align: left;"><td>yearOfRegistration :</td>  <td><input type="number" name="yearOfRegistration" placeholder="Enter the yearOfRegistration" required="required"></td></tr>
+    <tr style="text-align: left;"><td>gearbox :</td>  <td><input type="number" name="gearbox" placeholder="Enter the gearbox" required="required"></td></tr>
+    <tr style="text-align: left;"><td>powerPS :</td>  <td><input type="number" name="powerPS" placeholder="Enter the powerPS " required="required"></td></tr>
+    <tr style="text-align: left;"><td>model :</td>  <td> <input type="number" name="model" placeholder="Enter the model" required="required"></td></tr>
+    <tr style="text-align: left;"><td>kilometer :</td>  <td><input type="number" name="kilometer" placeholder="Enter the kilometer" required="required"></td></tr>
+    <tr style="text-align: left;"><td>monthOfRegistration:</td>  <td><input type="number" name="monthOfRegistration" placeholder="Enter the monthOfRegistration" required="required"></td></tr>
+    <tr style="text-align: left;"><td>fuelType:</td>  <td> <input type="number" name="fuelType" placeholder="Enter the fuelType" required="required"></td></tr>
+    <tr style="text-align: left;"><td>brand:</td>  <td> <input type="number" name="brand" placeholder="Enter the brand" required="required"></td></tr>
+    <tr style="text-align: left;"><td>notRepairedDamage:</td>  <td><input type="number" name="notRepairedDamage" placeholder="Enter the notRepairedDamage" required="required"></td></tr>
+    <tr style="text-align: left;"><td>postalCode:</td>  <td><input type="number" name="postalCode" placeholder="Enter the postalCode" required="required"></td></tr>
+    
+
+           </b>
+            </table>
+            <input type="submit" , value='PREDICT!' >
+
+
+
+        </form>
+        </div>
+
+    </div>
+
+          
+        
+
+
+</body>
+
+</html>
